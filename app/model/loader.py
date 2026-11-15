@@ -1,9 +1,11 @@
 """
 SanoVocal Model Manager (Singleton)
-Loads the frozen Base Tiny Aya Global + V3 LoRA adapter once into memory.
-Guarantees 4-bit NF4 QLoRA inference on RTX 3050 or safe CPU fallback.
+Loads the frozen Base Tiny Aya Global + LoRA adapter once into memory.
+Guarantees 4-bit NF4 QLoRA inference on CUDA or safe CPU fallback.
+Loads from local weights if present, otherwise streams from Hugging Face Hub.
 """
 
+import os
 import sys
 import threading
 from typing import Tuple, Optional, Any
@@ -37,7 +39,7 @@ def get_device_info() -> dict:
 
 def load_v3_model(device_preference: str = "auto") -> Tuple[Any, Any]:
     """
-    Singleton loader for SanoVocal V3 (Base Tiny Aya + V3 LoRA adapter).
+    Singleton loader for SanoVocal (Base Tiny Aya + LoRA adapter).
     Thread-safe and cached.
     """
     global _TOKENIZER, _MODEL
@@ -45,19 +47,44 @@ def load_v3_model(device_preference: str = "auto") -> Tuple[Any, Any]:
         if _MODEL is not None and _TOKENIZER is not None:
             return _TOKENIZER, _MODEL
 
-        print("[SanoVocal ModelLoader] Loading Tokenizer...")
+        # Read optional HF token from environment or Streamlit secrets
+        hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or None
+        if not hf_token:
+            try:
+                import streamlit as st
+                if hasattr(st, "secrets") and "HF_TOKEN" in st.secrets:
+                    hf_token = st.secrets["HF_TOKEN"]
+            except Exception:
+                pass
+
+        # Check if local base model weights actually exist on disk
+        local_base = Path("artifacts/model/base")
+        has_local_base_weights = local_base.exists() and any(local_base.glob("*.safetensors"))
+        base_model_id = str(local_base) if has_local_base_weights else "CohereLabs/tiny-aya-global"
+
+        # Check if local adapter weights actually exist on disk
+        local_adapter = Path(str(V3_ADAPTER_PATH))
+        has_local_adapter_weights = (
+            local_adapter.exists()
+            and ((local_adapter / "adapter_model.safetensors").exists() or (local_adapter / "adapter_model.bin").exists())
+        )
+        adapter_id = str(local_adapter) if has_local_adapter_weights else "rohith871/sanovocal-adapter"
+
+        print(f"[SanoVocal ModelLoader] Loading Tokenizer from {base_model_id}...")
         try:
             tokenizer = AutoTokenizer.from_pretrained(
-                BASE_MODEL_NAME,
+                base_model_id,
                 trust_remote_code=True,
                 use_fast=False,
-                local_files_only=True
+                token=hf_token,
+                local_files_only=has_local_base_weights
             )
         except Exception:
             tokenizer = AutoTokenizer.from_pretrained(
-                BASE_MODEL_NAME,
+                base_model_id,
                 trust_remote_code=True,
-                use_fast=False
+                use_fast=False,
+                token=hf_token
             )
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
@@ -65,7 +92,7 @@ def load_v3_model(device_preference: str = "auto") -> Tuple[Any, Any]:
         has_cuda = torch.cuda.is_available() and device_preference != "cpu"
 
         if has_cuda:
-            print("[SanoVocal ModelLoader] Initializing 4-bit NF4 Base Model on CUDA...")
+            print(f"[SanoVocal ModelLoader] Initializing 4-bit NF4 Base Model on CUDA from {base_model_id}...")
             bnb_config = BitsAndBytesConfig(
                 load_in_4bit=True,
                 bnb_4bit_quant_type="nf4",
@@ -74,45 +101,52 @@ def load_v3_model(device_preference: str = "auto") -> Tuple[Any, Any]:
             )
             try:
                 base_model = AutoModelForCausalLM.from_pretrained(
-                    BASE_MODEL_NAME,
+                    base_model_id,
                     quantization_config=bnb_config,
                     device_map="auto",
                     trust_remote_code=True,
                     torch_dtype=torch.float16,
-                    local_files_only=True
+                    token=hf_token,
+                    local_files_only=has_local_base_weights
                 )
             except Exception:
                 base_model = AutoModelForCausalLM.from_pretrained(
-                    BASE_MODEL_NAME,
+                    base_model_id,
                     quantization_config=bnb_config,
                     device_map="auto",
                     trust_remote_code=True,
-                    torch_dtype=torch.float16
+                    torch_dtype=torch.float16,
+                    token=hf_token
                 )
         else:
-            print("[SanoVocal ModelLoader] Initializing Base Model on CPU...")
+            print(f"[SanoVocal ModelLoader] Initializing Base Model on CPU from {base_model_id}...")
             try:
                 base_model = AutoModelForCausalLM.from_pretrained(
-                    BASE_MODEL_NAME,
+                    base_model_id,
                     device_map="cpu",
                     trust_remote_code=True,
                     torch_dtype=torch.float32,
-                    local_files_only=True
+                    token=hf_token,
+                    local_files_only=has_local_base_weights
                 )
             except Exception:
                 base_model = AutoModelForCausalLM.from_pretrained(
-                    BASE_MODEL_NAME,
+                    base_model_id,
                     device_map="cpu",
                     trust_remote_code=True,
-                    torch_dtype=torch.float32
+                    torch_dtype=torch.float32,
+                    token=hf_token
                 )
 
-        adapter_path = str(V3_ADAPTER_PATH)
-        if Path(adapter_path).exists():
-            print(f"[SanoVocal ModelLoader] Attaching frozen V3 LoRA adapter from {adapter_path}...")
-            model = PeftModel.from_pretrained(base_model, adapter_path)
-        else:
-            print(f"[SanoVocal ModelLoader] Warning: Adapter path {adapter_path} not found. Running base model.")
+        print(f"[SanoVocal ModelLoader] Attaching LoRA adapter from {adapter_id}...")
+        try:
+            model = PeftModel.from_pretrained(
+                base_model,
+                adapter_id,
+                token=hf_token
+            )
+        except Exception as e:
+            print(f"[SanoVocal ModelLoader] Warning: Failed to load adapter from {adapter_id} ({e}). Running base model.")
             model = base_model
 
         model.eval()
