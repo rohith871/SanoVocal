@@ -1,0 +1,41 @@
+scheme_id,scheme_name,category,priority,official_url
+ab_pmjay,Ayushman Bharat PM-JAY,health,1,https://pmjay.gov.in/
+ayushman_vay_vandana,Ayushman Vay Vandana,health,1,https://pmjay.gov.in/
+pmndp,Pradhan Mantri National Dialysis Programme,chronic_care,1,https://nhm.gov.in/
+npcdcs,"National Programme for Prevention & Control of Cancer, Diabetes, CVD and Stroke",chronic_care,2,https://nhm.gov.in/
+abdm,Ayushman Bharat Digital Mission (ABHA),digital_health,1,https://abdm.gov.in/
+ntep,National Tuberculosis Elimination Programme (Nikshay),health,1,https://tbcindia.gov.in/
+e_sanjeevani,eSanjeevani Teleconsultation,digital_health,2,https://esanjeevani.mohfw.gov.in/
+nmhp,National Mental Health Programme (Tele-MANAS),health,2,https://telemanas.mohfw.gov.in/
+jsy,Janani Suraksha Yojana,maternal_health,1,https://nhm.gov.in/
+jssk,Janani Shishu Suraksha Karyakram,maternal_child_health,1,https://nhm.gov.in/
+pmsma,Pradhan Mantri Surakshit Matritva Abhiyan,maternal_health,2,https://pmsma.nhp.gov.in/
+rbsk,Rashtriya Bal Swasthya Karyakram,child_health,2,https://rbsk.gov.in/
+uip,Universal Immunisation Programme (Mission Indradhanush),child_health,1,https://nhm.gov.in/
+poshan,POSHAN Abhiyaan (National Nutrition Mission),nutrition,1,https://poshanabhiyaan.gov.in/
+pmjdy,Pradhan Mantri Jan Dhan Yojana,financial_inclusion,1,https://pmjdy.gov.in/
+pmjjby,Pradhan Mantri Jeevan Jyoti Bima Yojana,social_security,2,https://financialservices.gov.in/
+pmsby,Pradhan Mantri Suraksha Bima Yojana,social_security,2,https://financialservices.gov.in/
+apy,Atal Pension Yojana,social_security,2,https://npscra.nsdl.co.in/
+pm_mudra,Pradhan Mantri Mudra Yojana,financial_inclusion,2,https://www.mudra.org.in/
+stand_up_india,Stand-Up India Scheme,financial_inclusion,2,https://www.standupmitra.in/
+pm_awas_g,Pradhan Mantri Awas Yojana - Gramin,housing,1,https://pmayg.nic.in/
+pm_awas_u,Pradhan Mantri Awas Yojana - Urban,housing,1,https://pmayuclap.gov.in/
+pm_ujjwala,Pradhan Mantri Ujjwala Yojana (LPG),utilities,1,https://www.pmuy.gov.in/
+saubhagya,Pradhan Mantri Sahaj Bijli Har Ghar Yojana,utilities,2,https://saubhagya.gov.in/
+jjm,Jal Jeevan Mission (Har Ghar Jal),utilities,2,https://jaljeevanmission.gov.in/
+pm_kisan,Pradhan Mantri Kisan Samman Nidhi,agriculture,1,https://pmkisan.gov.in/
+pm_fasal_bima,Pradhan Mantri Fasal Bima Yojana,agriculture,1,https://pmfby.gov.in/
+kcc,Kisan Credit Card (KCC),agriculture,2,https://agricoop.nic.in/
+mgnrega,Mahatma Gandhi National Rural Employment Guarantee Act,livelihood,1,https://nrega.nic.in/
+soil_health,Soil Health Card Scheme,agriculture,3,https://soilhealth.dac.gov.in/
+pmkvy,Pradhan Mantri Kaushal Vikas Yojana,skill_development,2,https://www.pmkvyofficial.org/
+pm_egp,Prime Minister's Employment Generation Programme,livelihood,2,https://www.kviconline.gov.in/
+nsp_minority,National Scholarship Portal - Central Sector Schemes,education,2,https://scholarships.gov.in/
+pm_shri,PM SHRI Schools Initiative,education,3,https://pmshri.education.gov.in/
+national_apprentice,National Apprenticeship Promotion Scheme (NAPS),skill_development,2,https://www.apprenticeshipindia.gov.in/
+nsap_old_age,Indira Gandhi National Old Age Pension Scheme (IGNOAPS),social_security,1,https://nsap.nic.in/
+nsap_widow,Indira Gandhi National Widow Pension Scheme (IGNWPS),social_security,1,https://nsap.nic.in/
+nsap_disability,Indira Gandhi National Disability Pension Scheme (IGNDPS),social_security,1,https://nsap.nic.in/
+disability_card,Unique Disability ID (UDID) Scheme,social_security,2,https://www.swavlambancard.gov.in/
+pm_daksh,PM-DAKSH (Skill Training for Marginalized Groups),skill_development,3,https://pmdaksh.dosje.gov.in/

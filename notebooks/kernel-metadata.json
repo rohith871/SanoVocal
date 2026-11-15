@@ -1,0 +1,17 @@
+{
+  "id": "koyarohith/sanovocal-aya-qlora-training-phase-c-d",
+  "title": "sanovocal-aya-qlora-training-phase-c-d",
+  "code_file": "sanovocal_aya_qlora_training.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [
+    "cohereforai/aya-expanse/transformers/8b/5"
+  ]
+}

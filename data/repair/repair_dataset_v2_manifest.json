@@ -1,0 +1,34 @@
+{
+  "dataset_name": "sanovocal_tool_contract_repair_v2.jsonl",
+  "sha256": "d52b266253154adbba0b9b5b87e36b2188ac0d3f9415723ff7a2a5357445e60c",
+  "total_records": 415,
+  "tool_distribution": {
+    "emergency_screen": 50,
+    "match_schemes": 45,
+    "get_scheme_rules": 97,
+    "get_documents": 78,
+    "find_facility": 37,
+    "create_case_summary": 38,
+    "escalate_to_human": 38
+  },
+  "no_tool_count": 87,
+  "no_tool_breakdown": {
+    "clarification_intake": 3,
+    "conversational_clarification": 58,
+    "fraud_refusal": 15,
+    "medical_refusal": 4,
+    "greeting_persona": 2,
+    "concept_explanation": 5
+  },
+  "language_distribution": {
+    "en": 142,
+    "hi": 138,
+    "hinglish": 135
+  },
+  "system_prompt_coverage_pct": 100.0,
+  "invalid_target_tool_names_count": 0,
+  "schema_violations_count": 0,
+  "semantic_argument_violations_count": 0,
+  "unknown_scheme_ids_count": 0,
+  "test_leakage_count": 0
+}

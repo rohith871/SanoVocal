@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-11-14T07:17:41Z",
+  "total_modules_captured": 360,
+  "top_suppressed": [
+    {
+      "module": "layers.15.self_attn.k_proj",
+      "target_activation": 0.8570797037100419,
+      "reference_activation": 0.9001771364128217,
+      "suppression_score": 0.04309743270277977
+    },
+    {
+      "module": "layers.19.self_attn.k_proj",
+      "target_activation": 0.9231441442389041,
+      "reference_activation": 0.9591501179384068,
+      "suppression_score": 0.03600597369950265
+    },
+    {
+      "module": "layers.11.self_attn.k_proj",
+      "target_activation": 0.8748829833930358,
+      "reference_activation": 0.8982176980935037,
+      "suppression_score": 0.023334714700467885
+    },
+    {
+      "module": "layers.23.self_attn.k_proj",
+      "target_activation": 0.9257889175787568,
+      "reference_activation": 0.948717909748666,
+      "suppression_score": 0.02292899216990918
+    },
+    {
+      "module": "layers.12.self_attn.k_proj",
+      "target_activation": 0.8887364343972877,
+      "reference_activation": 0.9026503307977691,
+      "suppression_score": 0.013913896400481462
+    },
+    {
+      "module": "layers.0.mlp",
+      "target_activation": 0.16760530252940953,
+      "reference_activation": 0.18053808761760592,
+      "suppression_score": 0.012932785088196397
+    },
+    {
+      "module": "layers.0.mlp.down_proj",
+      "target_activation": 0.16760530252940953,
+      "reference_activation": 0.18053808761760592,
+      "suppression_score": 0.012932785088196397
+    },
+    {
+      "module": "layers.14.self_attn.k_proj",
+      "target_activation": 1.0154539423529059,
+      "reference_activation": 1.0253853127360344,
+      "suppression_score": 0.009931370383128524
+    },
+    {
+      "module": "layers.3.self_attn.k_proj",
+      "target_activation": 0.7223256545839831,
+      "reference_activation": 0.7318305862136185,
+      "suppression_score": 0.009504931629635394
+    },
+    {
+      "module": "layers.16.self_attn.k_proj",
+      "target_activation": 0.8758840131340548,
+      "reference_activation": 0.8851453696843237,
+      "suppression_score": 0.009261356550268829
+    },
+    {
+      "module": "layers.17.self_attn.k_proj",
+      "target_activation": 0.9874021707801148,
+      "reference_activation": 0.9962479657260701,
+      "suppression_score": 0.008845794945955276
+    },
+    {
+      "module": "layers.6.self_attn.k_proj",
+      "target_activation": 0.9577229119604453,
+      "reference_activation": 0.9663617401383817,
+      "suppression_score": 0.008638828177936375
+    },
+    {
+      "module": "layers.5.self_attn.k_proj",
+      "target_activation": 0.9634090871550143,
+      "reference_activation": 0.9717398063512519,
+      "suppression_score": 0.008330719196237624
+    },
+    {
+      "module": "layers.7.self_attn.k_proj",
+      "target_activation": 0.8432777165435255,
+      "reference_activation": 0.8513259983155876,
+      "suppression_score": 0.008048281772062182
+    },
+    {
+      "module": "layers.4.self_attn.k_proj",
+      "target_activation": 0.950815265532583,
+      "reference_activation": 0.9579934139037505,
+      "suppression_score": 0.007178148371167481
+    },
+    {
+      "module": "layers.31.self_attn.k_proj",
+      "target_activation": 0.9444218927528709,
+      "reference_activation": 0.9506400417303666,
+      "suppression_score": 0.00621814897749573
+    },
+    {
+      "module": "layers.5.self_attn.q_proj",
+      "target_activation": 0.7036599910352379,
+      "reference_activation": 0.7092567303916439,
+      "suppression_score": 0.005596739356406033
+    },
+    {
+      "module": "layers.9.self_attn.k_proj",
+      "target_activation": 0.9650861626723781,
+      "reference_activation": 0.970223602373153,
+      "suppression_score": 0.0051374397007748485
+    },
+    {
+      "module": "layers.13.self_attn.k_proj",
+      "target_activation": 0.929933535750024,
+      "reference_activation": 0.9348438850138336,
+      "suppression_score": 0.004910349263809621
+    },
+    {
+      "module": "layers.0.self_attn.k_proj",
+      "target_activation": 1.0196871923981234,
+      "reference_activation": 1.0244555013487116,
+      "suppression_score": 0.004768308950588107
+    },
+    {
+      "module": "layers.2.mlp.down_proj",
+      "target_activation": 0.12724651816824917,
+      "reference_activation": 0.13192354477359913,
+      "suppression_score": 0.004677026605349965
+    },
+    {
+      "module": "layers.2.mlp",
+      "target_activation": 0.12724651816824917,
+      "reference_activation": 0.13192354477359913,
+      "suppression_score": 0.004677026605349965
+    },
+    {
+      "module": "layers.14.mlp",
+      "target_activation": 0.225175886094803,
+      "reference_activation": 0.22964594038785435,
+      "suppression_score": 0.004470054293051362
+    },
+    {
+      "module": "layers.14.mlp.down_proj",
+      "target_activation": 0.225175886094803,
+      "reference_activation": 0.22964594038785435,
+      "suppression_score": 0.004470054293051362
+    },
+    {
+      "module": "layers.9.mlp.gate_proj",
+      "target_activation": 0.5720721880206838,
+      "reference_activation": 0.5765227638185024,
+      "suppression_score": 0.004450575797818601
+    },
+    {
+      "module": "layers.7.mlp",
+      "target_activation": 0.28890425810823217,
+      "reference_activation": 0.2932325215660967,
+      "suppression_score": 0.004328263457864523
+    },
+    {
+      "module": "layers.7.mlp.down_proj",
+      "target_activation": 0.28890425810823217,
+      "reference_activation": 0.2932325215660967,
+      "suppression_score": 0.004328263457864523
+    },
+    {
+      "module": "layers.1.self_attn.k_proj",
+      "target_activation": 0.9182888037757948,
+      "reference_activation": 0.9220071999588981,
+      "suppression_score": 0.003718396183103323
+    },
+    {
+      "module": "layers.0.self_attn.q_proj",
+      "target_activation": 0.7475102621829137,
+      "reference_activation": 0.7506480679148808,
+      "suppression_score": 0.0031378057319670916
+    },
+    {
+      "module": "layers.13.self_attn.o_proj",
+      "target_activation": 0.13156734056246933,
+      "reference_activation": 0.1343838097236585,
+      "suppression_score": 0.0028164691611891612
+    },
+    {
+      "module": "layers.13.self_attn",
+      "target_activation": 0.13156734056246933,
+      "reference_activation": 0.1343838097236585,
+      "suppression_score": 0.0028164691611891612
+    },
+    {
+      "module": "layers.11.mlp.gate_proj",
+      "target_activation": 0.6333621278172359,
+      "reference_activation": 0.6359716599108651,
+      "suppression_score": 0.002609532093629241
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "pipeline_name": "SanoVocal CuratorKIT Phase A",
+  "curatorkit_version": "0.1.21",
+  "execution_timestamp": "2026-11-09T08:01:23.497682+00:00",
+  "input_dataset": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\cleaned\\sanovocal_final_train_pool.jsonl",
+  "total_candidate_records": 1900,
+  "accepted_records": 1888,
+  "rejected_records": 12,
+  "acceptance_rate_percent": 99.37,
+  "rejection_rate_percent": 0.63,
+  "stage_breakdown": {
+    "JSONLReader": {
+      "output_count": 1900,
+      "rejected_count": 0
+    },
+    "SchemaGate": {
+      "input_count": 1900,
+      "output_count": 1888,
+      "probe_recovered": 0,
+      "rejected_count": 12
+    },
+    "ExactDeduplicator": {
+      "input_count": 1888,
+      "output_count": 1888
+    },
+    "TextCleaner": {
+      "input_count": 1888,
+      "output_count": 1888
+    },
+    "MessagesExporter": {
+      "exported_count": 1888
+    },
+    "AlpacaExporter": {
+      "exported_count": 1888
+    }
+  },
+  "artifacts": {
+    "curated_sft_train": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\curated\\curated_sft_train.jsonl",
+    "rejected_records": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\curated\\rejected_records.jsonl",
+    "verified_knowledge_cards": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\curated\\verified_knowledge_cards.jsonl",
+    "curator_manifest": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\curated\\curator_run\\manifest.json"
+  }
+}

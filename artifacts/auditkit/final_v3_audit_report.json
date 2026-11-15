@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-11-14T19:33:37Z",
+  "auditkit_version": "1.1.6",
+  "dataset": "artifacts/evaluation/final_v3/v3_traces.jsonl",
+  "total_episodes": 45,
+  "official_summary": "Agent eval   Mode: recorded   Cases: 45\nVerified success: 0/45 (0 decided)   Failure: 0   Unknown outcome: 45   Error: 0   Over budget: 0\nEndpoint errors: 0\nStatus: ineligible 45\nTrace coverage: full 30, tool names only 0, answer only 15\nTool validity: 0/0 eligible\nMedian latency: n/a          Agent calls: 0",
+  "trace_coverage": {
+    "total_cases": 45,
+    "full_tier_traces": 30,
+    "answer_only_traces": 15
+  },
+  "formal_evaluation_status": "INELIGIBLE_FOR_OUTCOME_SCORING",
+  "outcome_breakdown": {
+    "verified_success": 0,
+    "failure": 0,
+    "unknown_outcome": 45,
+    "error": 0,
+    "over_budget": 0
+  },
+  "audit_finding": "AuditKIT 1.1.6 successfully ingested and verified 45 episode traces (30 full tool executions, 15 direct responses). However, in recorded trajectory mode without an external judge model or outcome oracle, AuditKIT marked all 45 cases as 'ineligible/unknown outcome'. This confirms valid trace schema coverage but does NOT constitute automated task-success certification."
+}

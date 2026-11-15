@@ -1,0 +1,10 @@
+{
+  "title": "SanoVocal Tool Contract Repair Dataset",
+  "id": "koyarohith/sanovocal-tool-contract-repair",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "description": "High-precision tool-contract repair dataset for SanoVocal (226 examples) across 7 categories and 3 languages (English, Hindi, Hinglish), strictly verified via deterministic tool execution engine."
+}

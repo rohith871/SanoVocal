@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and credentials
+.env
+*.env
+*.token
+scripts/_hf_credentials_dataset/
+*_credentials*
+
+# Hugging Face cache
+hf_cache/
+.cache/
+
+# Large model files
+*.safetensors
+*.bin
+*.gguf
+*.onnx
+
+# Large datasets and outputs
+data/raw_hf/
+data/raw_sources/
+data/cleaned/
+data/curated/
+data/evaluation/
+data/traces/
+outputs/
+
+# OS files
+.DS_Store
+Thumbs.db

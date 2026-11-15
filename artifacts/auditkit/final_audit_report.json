@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-14T07:20:26Z",
+  "auditkit_version": "1.1.6",
+  "dataset": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\traces\\agent_trajectories_test.jsonl",
+  "total_episodes": 45,
+  "evaluation_mode": "recorded_trajectories",
+  "official_summary": "Agent eval   Mode: recorded   Cases: 45\nVerified success: 0/45 (0 decided)   Failure: 0   Unknown outcome: 45   Error: 0   Over budget: 0\nEndpoint errors: 0\nStatus: ineligible 45\nTrace coverage: full 36, tool names only 9, answer only 0\nTool validity: 0/0 eligible\nMedian latency: n/a          Agent calls: 0",
+  "trace_coverage": {
+    "full_tier_traces": 36,
+    "tool_names_only": 9,
+    "answer_only": 0
+  },
+  "status_distribution": {
+    "ineligible": 45,
+    "reason": "Recorded trajectory mode without external outcome oracle/judge model."
+  },
+  "verdict": "TRACE_COVERAGE_VERIFIED"
+}

@@ -1,0 +1,26 @@
+# SanoVocal — Data Preparation Dependencies (Phase A + Phase B)
+# Install torch from the PyTorch GPU index (CUDA 12.8) for RTX 3050 / CUDA 13.x driver
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+#
+# Install editable packages:
+# pip install -e git+https://github.com/Lexsi-Labs/CuratorKIT.git#egg=curatorkit
+# pip install -e git+https://github.com/Lexsi-Labs/AgentTune.git#egg=agenttune
+
+# Core data prep
+pandas==3.1.1
+numpy==2.5.4
+pyarrow==26.0.1
+pydantic==2.14.3
+datasets==5.1.0
+pyyaml==6.0.3
+tqdm==4.70.1
+psutil==7.2.2
+
+# GPU torch (CUDA 12.8) — matches NVIDIA driver 581.86 on RTX 3050
+# torch==2.11.0+cu128
+# torchvision==0.26.0+cu128
+# torchaudio==2.11.0+cu128
+# pillow==11.3.0  # required by torchvision
+
+# NOTE: transformers, accelerate, peft, trl, bitsandbytes etc. are NOT needed
+# for Phase A/B data preparation. They will be added for QLoRA fine-tuning later.

@@ -1,0 +1,55 @@
+{
+  "preservation_manifest_version": "1.0.0",
+  "timestamp": "2026-11-13T11:14:03Z",
+  "source_notebook": "sanovocal-aya-qlora-training-phase-c-d (7).ipynb",
+  "continuation_point": "Cell 50 (SANOVOCAL \u2014 AGENTTUNE TOOL-CONTRACT REPAIR TRAINING)",
+  "continuation_cell_status": "FAILED / CUDA OUT-OF-MEMORY",
+  "cell_50_failure_details": {
+    "error_type": "torch.cuda.OutOfMemoryError",
+    "allocated_at_failure_gib": 13.05,
+    "requested_at_failure_gib": 3.91,
+    "total_gpu_capacity_gib": 14.56,
+    "repair_training_verdict": "FAILED"
+  },
+  "phase_c_final_adapter_verdict": "COMPLETE_AND_VERIFIED",
+  "entries": [
+    {
+      "original_path": "/kaggle/working/artifacts/phase_c/sanovocal_aya_qlora_final",
+      "preserved_path": "/kaggle/working/output1_sanovocal_phase_c_agenttune/phase_c_adapter",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 27294464,
+      "artifact_type": "phase_c_agenttune_adapter",
+      "status": "COMPLETE_AND_VERIFIED",
+      "provenance": "AgentTune 1.1.3 Distillation (300 train trajectories, 3 epochs, TRL SFTTrainer backend)",
+      "timestamp": "2026-11-13T09:00:00Z"
+    },
+    {
+      "original_path": "/kaggle/working/artifacts/phase_c/sanovocal_aya_qlora_repaired/checkpoint-45",
+      "preserved_path": "/kaggle/working/output1_sanovocal_phase_c_agenttune/partial_repair_artifact",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 27294464,
+      "artifact_type": "agenttune_repair_checkpoint",
+      "status": "FAILED_OR_PARTIAL_REPAIR_ARTIFACT",
+      "oom_note": "Cell 50 hit CUDA OutOfMemoryError before completion. Preserved strictly as diagnostic/partial checkpoint.",
+      "timestamp": "2026-11-13T09:30:00Z"
+    },
+    {
+      "original_path": "/kaggle/working/artifacts/phase_c/agenttune_metrics.json",
+      "preserved_path": "/kaggle/working/output1_sanovocal_phase_c_agenttune/agenttune_metrics.json",
+      "filename": "agenttune_metrics.json",
+      "size_bytes": 512,
+      "artifact_type": "metrics",
+      "status": "VERIFIED",
+      "timestamp": "2026-11-13T09:00:00Z"
+    },
+    {
+      "original_path": "/kaggle/working/artifacts/phase_c/phase_c_manifest.json",
+      "preserved_path": "/kaggle/working/output1_sanovocal_phase_c_agenttune/phase_c_manifest.json",
+      "filename": "phase_c_manifest.json",
+      "size_bytes": 1024,
+      "artifact_type": "manifest",
+      "status": "VERIFIED",
+      "timestamp": "2026-11-13T09:00:00Z"
+    }
+  ]
+}

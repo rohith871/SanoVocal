@@ -1,0 +1,40 @@
+{
+  "total_records": 226,
+  "records_with_tool_calls": 178,
+  "records_without_tool_calls": 48,
+  "multi_tool_records": 55,
+  "system_message_count": 0,
+  "system_message_coverage_pct": 0.0,
+  "language_counts": {
+    "en": 79,
+    "hi": 75,
+    "hinglish": 72
+  },
+  "official_tool_counts": {
+    "emergency_screen": 35,
+    "match_schemes": 21,
+    "get_scheme_rules": 82,
+    "get_documents": 27,
+    "find_facility": 10,
+    "create_case_summary": 29,
+    "escalate_to_human": 29
+  },
+  "invalid_tool_counts": {},
+  "category_distribution": {
+    "A_exact_tool_contract": 35,
+    "B_missing_info_clarification": 35,
+    "C_emergency_safety": 30,
+    "D_tool_result_grounding": 36,
+    "E_hallucination_resistance_refusal": 35,
+    "F_multi_step_clarification": 30,
+    "G_case_summary_escalation": 25
+  },
+  "test_leakage_count": 0,
+  "test_leaked_tasks": [],
+  "root_cause_analysis": {
+    "missing_system_ontology": "0 out of 226 records contain a system message defining the 7 tools and schemas.",
+    "tool_imbalance": "get_scheme_rules dominates (82 calls = 35.2%), while find_facility has only 10 calls and get_documents has only 27 calls.",
+    "lack_of_contrastive_routing": "Document queries and scheme discovery queries are not paired contrastively, leading model to overfit on keyword prefixes like 'get_scheme' rather than semantic intent.",
+    "format_over_routing": "V1 prioritized teaching strict JSON syntax formatting over semantic tool disambiguation."
+  }
+}

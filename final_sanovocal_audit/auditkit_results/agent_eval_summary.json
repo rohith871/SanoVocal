@@ -1,0 +1,12 @@
+{
+  "framework": "AuditKIT 1.1.6",
+  "mode": "recorded",
+  "cases_evaluated": 45,
+  "trace_coverage": {
+    "full": 36,
+    "tool_names_only": 9,
+    "answer_only": 0
+  },
+  "test_sha256": "667E60B9F0EDABB2DE7232DA50A2F92E6362662A37B80701FB26BB7205366FC3",
+  "status": "PASSED"
+}

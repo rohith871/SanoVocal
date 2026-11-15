@@ -1,0 +1,18 @@
+{
+  "benchmark_steps": 5,
+  "step_times_seconds": [
+    17.3,
+    40.12,
+    94.6,
+    84.64,
+    118.98
+  ],
+  "avg_step_time_seconds": 71.13,
+  "micro_batch_time_seconds": 17.78,
+  "peak_vram_mb": 5692.3,
+  "reserved_vram_mb": 6130.0,
+  "total_1_epoch_steps": 103,
+  "est_1_epoch_minutes": 122.1,
+  "est_1_epoch_hours": 2.04,
+  "gate_status": "YELLOW"
+}

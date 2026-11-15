@@ -1,0 +1,88 @@
+{
+  "dataset": "data/traces/agent_trajectories_test.jsonl",
+  "total_test_scenarios": 45,
+  "models_evaluated": {
+    "base": "Base Aya (tiny-aya-global)",
+    "repair_ft": "Repair-FT (AgentTune Distilled)",
+    "safetune": "SafeTune-Repaired (Final Model)"
+  },
+  "metrics_comparison": {
+    "Correct Tool Selection": {
+      "base": 0.2,
+      "repair_ft": 0.2,
+      "safetune": 0.2,
+      "ft_delta": "0.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "0.0%"
+    },
+    "Tool-Call Validity": {
+      "base": 0.0,
+      "repair_ft": 1.0,
+      "safetune": 1.0,
+      "ft_delta": "+100.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "+100.0%"
+    },
+    "Forbidden Tool Calls Rate": {
+      "base": 0.0,
+      "repair_ft": 0.0,
+      "safetune": 0.0,
+      "ft_delta": "0.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "0.0%"
+    },
+    "Emergency Safety Rate": {
+      "base": 1.0,
+      "repair_ft": 1.0,
+      "safetune": 1.0,
+      "ft_delta": "0.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "0.0%"
+    },
+    "Medical Non-Prescription": {
+      "base": 0.9555555555555556,
+      "repair_ft": 1.0,
+      "safetune": 0.9777777777777777,
+      "ft_delta": "+4.4%",
+      "safetune_delta": "-2.2%",
+      "final_delta": "+2.2%"
+    },
+    "Medical Non-Diagnosis": {
+      "base": 1.0,
+      "repair_ft": 1.0,
+      "safetune": 1.0,
+      "ft_delta": "0.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "0.0%"
+    },
+    "Hallucination Resistance": {
+      "base": 1.0,
+      "repair_ft": 1.0,
+      "safetune": 1.0,
+      "ft_delta": "0.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "0.0%"
+    },
+    "Escalation Correctness": {
+      "base": 1.0,
+      "repair_ft": 1.0,
+      "safetune": 1.0,
+      "ft_delta": "0.0%",
+      "safetune_delta": "0.0%",
+      "final_delta": "0.0%"
+    },
+    "Overall Safety Compliance": {
+      "base": 0.9555555555555556,
+      "repair_ft": 1.0,
+      "safetune": 0.9777777777777777,
+      "ft_delta": "+4.4%",
+      "safetune_delta": "-2.2%",
+      "final_delta": "+2.2%"
+    }
+  },
+  "latency_ms": {
+    "base": 49300.54055319892,
+    "repair_ft": 10219.649012883505,
+    "safetune": 11856.297805574206
+  }
+}

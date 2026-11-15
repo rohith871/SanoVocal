@@ -1,0 +1,18 @@
+{
+  "evaluation_name": "SanoVocal Production V3 Benchmark",
+  "timestamp": "2026-11-14T18:29:07Z",
+  "locked_test_path": "C:\\Users\\KOYA ROHITH\\SanoVocal\\data\\traces\\agent_trajectories_test.jsonl",
+  "locked_test_sha256": "667E60B9F0EDABB2DE7232DA50A2F92E6362662A37B80701FB26BB7205366FC3",
+  "v3_adapter_path": "C:\\Users\\KOYA ROHITH\\SanoVocal\\artifacts\\model\\sanovocal_finetuned_v3",
+  "v3_adapter_sha256": "39291232E229F7B5B3A03A424298CB67025CC958E4D09B59564588C6AB44FCAC",
+  "base_model_path": "C:\\Users\\KOYA ROHITH\\SanoVocal\\artifacts\\model\\base",
+  "generation_config": {
+    "do_sample": false,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_new_tokens": 160,
+    "repetition_penalty": 1.0,
+    "precision": "4-bit NF4 bfloat16/float16"
+  },
+  "system_prompt_sha256": "49F1E9267DFF2760F74A7981266B96674E8528A0F65865DBD7A13D415044BA14"
+}

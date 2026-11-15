@@ -1,0 +1,43 @@
+{
+  "dataset_name": "sanovocal-tool-contract-repair",
+  "total_records": 226,
+  "sha256": "0A0F6E6D588587FC39B5CA2828C18BC7FB684F0586A0CA5F35549E2037F74FCF",
+  "file_name": "sanovocal_tool_contract_repair.jsonl",
+  "locked_test_sha256_verified": true,
+  "distribution": {
+    "categories": {
+      "A_exact_tool_contract": 35,
+      "B_missing_info_clarification": 35,
+      "C_emergency_safety": 30,
+      "D_tool_result_grounding": 36,
+      "E_hallucination_resistance_refusal": 35,
+      "F_multi_step_clarification": 30,
+      "G_case_summary_escalation": 25
+    },
+    "languages": {
+      "en": 79,
+      "hi": 75,
+      "hinglish": 72
+    },
+    "tools_called": {
+      "emergency_screen": 35,
+      "match_schemes": 21,
+      "get_scheme_rules": 82,
+      "get_documents": 27,
+      "find_facility": 10,
+      "create_case_summary": 29,
+      "escalate_to_human": 29
+    }
+  },
+  "authoritative_tools": [
+    "get_documents",
+    "get_scheme_rules",
+    "emergency_screen",
+    "match_schemes",
+    "find_facility",
+    "create_case_summary",
+    "escalate_to_human"
+  ],
+  "validation_status": "PASSED",
+  "error_count": 0
+}

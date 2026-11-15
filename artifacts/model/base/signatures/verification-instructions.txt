@@ -1,0 +1,40 @@
+====================================
+MODEL SIGNATURE VERIFICATION GUIDE
+====================================
+
+Model: CohereLabs/tiny-aya-global
+Revision: main
+Environment: PRODUCTION
+Signed at: 2025-10-27T18:55:09Z
+Workflow Run: https://github.com/cohere-ai/model-signing/actions/runs/22342022790
+
+TRANSPARENCY LOG
+----------------
+This signature is recorded in the Sigstore Rekor transparency log.
+
+Rekor Entry: https://search.sigstore.dev/?logIndex=984891074
+Log Index: 984891074
+Identity: https://github.com/cohere-ai/model-signing/.github/workflows/sign-model.yml@refs/heads/main
+
+VERIFICATION
+------------
+To verify this signature locally:
+
+1. Install the model-signing package:
+   pip install model-signing
+
+2. Install huggingface_hub and download the model:
+   pip install huggingface_hub
+   huggingface-cli download CohereLabs/tiny-aya-global --revision main --local-dir ./model
+
+3. Verify the signature:
+   model_signing verify ./model \
+     --signature tiny-aya-global.sig \
+     --identity "https://github.com/cohere-ai/model-signing/.github/workflows/sign-model.yml@refs/heads/main" \
+     --identity_provider "https://token.actions.githubusercontent.com" \
+     --ignore_unsigned_files
+
+Note: This signature was created with selective file inclusion (*.safetensors,*.bin,*.json,*.txt,*.model,*.yaml,*.yml).
+      Use --ignore_unsigned_files to verify only the files that were signed.
+
+====================================

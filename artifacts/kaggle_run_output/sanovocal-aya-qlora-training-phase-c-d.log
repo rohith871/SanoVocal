@@ -1,0 +1,151 @@
+[{"stream_name":"stderr","time":7.856512647,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.856551807,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.856556665,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.856575132,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.452067804,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.452098081,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.452103399,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.452107017,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":16.400790627,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":16.400846991,"data":" SANOVOCAL MASTER PIPELINE: RUNTIME \u0026 DEPENDENCY VERIFICATION\n"}
+,{"stream_name":"stdout","time":16.400854653,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":16.40085843,"data":"Python Executable : /usr/bin/python3\n"}
+,{"stream_name":"stdout","time":16.40086726,"data":"Python Version    : 3.13.16\n"}
+,{"stream_name":"stdout","time":16.400869738,"data":"PyTorch Version   : 2.11.0+cu130\n"}
+,{"stream_name":"stdout","time":16.400871951,"data":"CUDA Available    : True\n"}
+,{"stream_name":"stdout","time":16.400874144,"data":"GPU Accelerator   : Tesla T4 (14.56 GB VRAM)\n"}
+,{"stream_name":"stdout","time":16.400876468,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":16.400878752,"data":"  transformers     : 5.20.2\n"}
+,{"stream_name":"stdout","time":16.400880944,"data":"  peft             : 0.21.2\n"}
+,{"stream_name":"stdout","time":16.400883143,"data":"  trl              : NOT INSTALLED (No package metadata was found for trl)\n"}
+,{"stream_name":"stdout","time":16.400885499,"data":"  bitsandbytes     : NOT INSTALLED (No package metadata was found for bitsandbytes)\n"}
+,{"stream_name":"stdout","time":16.400887784,"data":"  agenttune        : NOT INSTALLED (No package metadata was found for agenttune)\n"}
+,{"stream_name":"stdout","time":16.400890044,"data":"  safetune         : NOT INSTALLED (No package metadata was found for safetune)\n"}
+,{"stream_name":"stdout","time":16.400892687,"data":"  auditkit         : NOT INSTALLED (No package metadata was found for auditkit)\n"}
+,{"stream_name":"stdout","time":16.400895007,"data":"  curatorkit       : NOT INSTALLED (No package metadata was found for curatorkit)\n"}
+,{"stream_name":"stdout","time":16.400897288,"data":"  datasets         : 4.8.5\n"}
+,{"stream_name":"stdout","time":16.400899464,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":16.400915783,"data":"[OK] Output directory structures verified.\n"}
+,{"stream_name":"stdout","time":16.420578757,"data":"======================================================================\n"}
+,{"stream_name":"stdout","time":16.420599691,"data":" SANOVOCAL STEP 2: VERIFY FROZEN PHASE A \u0026 B ARTIFACTS\n"}
+,{"stream_name":"stdout","time":16.420605085,"data":"======================================================================\n"}
+,{"stream_name":"stderr","time":20.036523332,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":20.037280431,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":20.037296742,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":20.037304664,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":20.03731064,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":20.037315369,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":20.037319839,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":20.037323835,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 202, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":20.037328053,"data":"    for output in cell.outputs:\n"}
+,{"stream_name":"stderr","time":20.037331969,"data":"                  ^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":20.037341635,"data":"TypeError: 'NoneType' object is not iterable\n"}
+,{"stream_name":"stderr","time":22.252185869,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":22.252213354,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":22.416880745,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":22.416904572,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":23.173457365,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":23.218572636,"data":"[NbConvertApp] ERROR | Notebook JSON is invalid: Additional properties are not allowed ('execution_count', 'outputs' were unexpected)\n"}
+,{"stream_name":"stderr","time":23.218598423,"data":"\n"}
+,{"stream_name":"stderr","time":23.218602678,"data":"Failed validating 'additionalProperties' in markdown_cell:\n"}
+,{"stream_name":"stderr","time":23.218606317,"data":"\n"}
+,{"stream_name":"stderr","time":23.218609665,"data":"On instance['cells'][0]:\n"}
+,{"stream_name":"stderr","time":23.218612911,"data":"{'cell_type': 'markdown',\n"}
+,{"stream_name":"stderr","time":23.218623096,"data":" 'execution_count': None,\n"}
+,{"stream_name":"stderr","time":23.218625655,"data":" 'id': '25c7498e',\n"}
+,{"stream_name":"stderr","time":23.218627971,"data":" 'metadata': {'papermill': {'duration': 0.003909,\n"}
+,{"stream_name":"stderr","time":23.2186304,"data":"                            'end_time': '2026-11-10T11:06:04.888631+00:00',\n"}
+,{"stream_name":"stderr","time":23.218633398,"data":"                            'exception': False,\n"}
+,{"stream_name":"stderr","time":23.218635786,"data":"                            'start_time': '2026-11-10T11:06:04.884722+00:00',\n"}
+,{"stream_name":"stderr","time":23.218638161,"data":"                            'status': 'completed'},\n"}
+,{"stream_name":"stderr","time":23.218640405,"data":"              'tags': []},\n"}
+,{"stream_name":"stderr","time":23.218642698,"data":" 'outputs': None,\n"}
+,{"stream_name":"stderr","time":23.218653864,"data":" 'source': '# SanoVocal — End-to-End Master Pipeline: Phase C \u0026 Phase D\\n'\n"}
+,{"stream_name":"stderr","time":23.218657434,"data":"           '### ...'}\n"}
+,{"stream_name":"stderr","time":23.256451129,"data":"[NbConvertApp] ERROR | Notebook JSON is invalid: Additional properties are not allowed ('execution_count', 'outputs' were unexpected)\n"}
+,{"stream_name":"stderr","time":23.256474358,"data":"\n"}
+,{"stream_name":"stderr","time":23.256478662,"data":"Failed validating 'additionalProperties' in markdown_cell:\n"}
+,{"stream_name":"stderr","time":23.256482264,"data":"\n"}
+,{"stream_name":"stderr","time":23.256485362,"data":"On instance['cells'][0]:\n"}
+,{"stream_name":"stderr","time":23.25648859,"data":"{'cell_type': 'markdown',\n"}
+,{"stream_name":"stderr","time":23.256493998,"data":" 'execution_count': None,\n"}
+,{"stream_name":"stderr","time":23.256501214,"data":" 'id': '25c7498e',\n"}
+,{"stream_name":"stderr","time":23.256503622,"data":" 'metadata': {'papermill': {'duration': 0.003909,\n"}
+,{"stream_name":"stderr","time":23.256505995,"data":"                            'end_time': '2026-11-10T11:06:04.888631+00:00',\n"}
+,{"stream_name":"stderr","time":23.25650838,"data":"                            'exception': False,\n"}
+,{"stream_name":"stderr","time":23.25651066,"data":"                            'start_time': '2026-11-10T11:06:04.884722+00:00',\n"}
+,{"stream_name":"stderr","time":23.25651298,"data":"                            'status': 'completed'},\n"}
+,{"stream_name":"stderr","time":23.25652323,"data":"              'tags': []},\n"}
+,{"stream_name":"stderr","time":23.256525632,"data":" 'outputs': None,\n"}
+,{"stream_name":"stderr","time":23.256527815,"data":" 'source': '# SanoVocal — End-to-End Master Pipeline: Phase C \u0026 Phase D\\n'\n"}
+,{"stream_name":"stderr","time":23.256530952,"data":"           '### ...'}\n"}
+,{"stream_name":"stderr","time":23.258478162,"data":"[NbConvertApp] Writing 68616 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":25.785790998,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":25.83168476,"data":"[NbConvertApp] ERROR | Notebook JSON is invalid: Additional properties are not allowed ('execution_count', 'outputs' were unexpected)\n"}
+,{"stream_name":"stderr","time":25.831709034,"data":"\n"}
+,{"stream_name":"stderr","time":25.831717838,"data":"Failed validating 'additionalProperties' in markdown_cell:\n"}
+,{"stream_name":"stderr","time":25.831720789,"data":"\n"}
+,{"stream_name":"stderr","time":25.831722973,"data":"On instance['cells'][0]:\n"}
+,{"stream_name":"stderr","time":25.831725205,"data":"{'cell_type': 'markdown',\n"}
+,{"stream_name":"stderr","time":25.831727463,"data":" 'execution_count': None,\n"}
+,{"stream_name":"stderr","time":25.831729731,"data":" 'id': '25c7498e',\n"}
+,{"stream_name":"stderr","time":25.831732125,"data":" 'metadata': {'papermill': {'duration': 0.003909,\n"}
+,{"stream_name":"stderr","time":25.831734542,"data":"                            'end_time': '2026-11-10T11:06:04.888631+00:00',\n"}
+,{"stream_name":"stderr","time":25.831737355,"data":"                            'exception': False,\n"}
+,{"stream_name":"stderr","time":25.831756583,"data":"                            'start_time': '2026-11-10T11:06:04.884722+00:00',\n"}
+,{"stream_name":"stderr","time":25.831760668,"data":"                            'status': 'completed'},\n"}
+,{"stream_name":"stderr","time":25.831764992,"data":"              'tags': []},\n"}
+,{"stream_name":"stderr","time":25.831780418,"data":" 'outputs': None,\n"}
+,{"stream_name":"stderr","time":25.831783995,"data":" 'source': '# SanoVocal — End-to-End Master Pipeline: Phase C \u0026 Phase D\\n'\n"}
+,{"stream_name":"stderr","time":25.831788387,"data":"           '### ...'}\n"}
+,{"stream_name":"stderr","time":25.878700424,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":25.880663896,"data":"  File \"/usr/local/bin/jupyter-nbconvert\", line 10, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":25.88067817,"data":"    sys.exit(main())\n"}
+,{"stream_name":"stderr","time":25.880682701,"data":"             ~~~~^^\n"}
+,{"stream_name":"stderr","time":25.880686644,"data":"  File \"/usr/local/lib/python3.13/dist-packages/jupyter_core/application.py\", line 284, in launch_instance\n"}
+,{"stream_name":"stderr","time":25.880690529,"data":"    super().launch_instance(argv=argv, **kwargs)\n"}
+,{"stream_name":"stderr","time":25.880694116,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880697382,"data":"  File \"/usr/local/lib/python3.13/dist-packages/traitlets/config/application.py\", line 1080, in launch_instance\n"}
+,{"stream_name":"stderr","time":25.880700945,"data":"    app.start()\n"}
+,{"stream_name":"stderr","time":25.880704074,"data":"    ~~~~~~~~~^^\n"}
+,{"stream_name":"stderr","time":25.88070724,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/nbconvertapp.py\", line 369, in start\n"}
+,{"stream_name":"stderr","time":25.880711374,"data":"    self.convert_notebooks()\n"}
+,{"stream_name":"stderr","time":25.880715213,"data":"    ~~~~~~~~~~~~~~~~~~~~~~^^\n"}
+,{"stream_name":"stderr","time":25.880718563,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/nbconvertapp.py\", line 541, in convert_notebooks\n"}
+,{"stream_name":"stderr","time":25.880722904,"data":"    self.convert_single_notebook(notebook_filename)\n"}
+,{"stream_name":"stderr","time":25.880726524,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880729878,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/nbconvertapp.py\", line 506, in convert_single_notebook\n"}
+,{"stream_name":"stderr","time":25.880733428,"data":"    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)\n"}
+,{"stream_name":"stderr","time":25.88073697,"data":"                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880740364,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/nbconvertapp.py\", line 435, in export_single_notebook\n"}
+,{"stream_name":"stderr","time":25.880743868,"data":"    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)\n"}
+,{"stream_name":"stderr","time":25.880747281,"data":"                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880752315,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/exporters/exporter.py\", line 190, in from_filename\n"}
+,{"stream_name":"stderr","time":25.880755853,"data":"    return self.from_file(f, resources=resources, **kw)\n"}
+,{"stream_name":"stderr","time":25.88076088,"data":"           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880764231,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/exporters/exporter.py\", line 208, in from_file\n"}
+,{"stream_name":"stderr","time":25.880768007,"data":"    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)\n"}
+,{"stream_name":"stderr","time":25.880781146,"data":"           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880786219,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/exporters/html.py\", line 211, in from_notebook_node\n"}
+,{"stream_name":"stderr","time":25.880789844,"data":"    return super().from_notebook_node(nb, resources, **kw)\n"}
+,{"stream_name":"stderr","time":25.880793186,"data":"           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.88079647,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/exporters/templateexporter.py\", line 375, in from_notebook_node\n"}
+,{"stream_name":"stderr","time":25.880800036,"data":"    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)\n"}
+,{"stream_name":"stderr","time":25.88080333,"data":"                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880821561,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/exporters/exporter.py\", line 147, in from_notebook_node\n"}
+,{"stream_name":"stderr","time":25.88082639,"data":"    nb_copy, resources = self._preprocess(nb_copy, resources)\n"}
+,{"stream_name":"stderr","time":25.880829843,"data":"                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880833178,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/exporters/exporter.py\", line 334, in _preprocess\n"}
+,{"stream_name":"stderr","time":25.880836637,"data":"    nbc, resc = preprocessor(nbc, resc)\n"}
+,{"stream_name":"stderr","time":25.880839851,"data":"                ~~~~~~~~~~~~^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880843069,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/preprocessors/base.py\", line 47, in __call__\n"}
+,{"stream_name":"stderr","time":25.880846505,"data":"    return self.preprocess(nb, resources)\n"}
+,{"stream_name":"stderr","time":25.880849731,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880853572,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/preprocessors/base.py\", line 69, in preprocess\n"}
+,{"stream_name":"stderr","time":25.880857762,"data":"    nb.cells[index], resources = self.preprocess_cell(cell, resources, index)\n"}
+,{"stream_name":"stderr","time":25.880861319,"data":"                                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880865209,"data":"  File \"/usr/local/lib/python3.13/dist-packages/nbconvert/preprocessors/extractoutput.py\", line 78, in preprocess_cell\n"}
+,{"stream_name":"stderr","time":25.880869056999998,"data":"    for index, out in enumerate(cell.get('outputs', [])):\n"}
+,{"stream_name":"stderr","time":25.880872321,"data":"                      ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":25.880899062,"data":"TypeError: 'NoneType' object is not iterable\n"}
+]

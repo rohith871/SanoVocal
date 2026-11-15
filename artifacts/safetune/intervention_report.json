@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-11-14T07:17:53Z",
+  "status": "SUCCESS",
+  "method": "SafeReAct weight-space activation reactivation",
+  "alpha": 0.3,
+  "mutated_tensors": 25,
+  "weights_hash_before": "42D8FABA3242F0DA982BBBDC7C5353701E010036614420EFA74C215551BBFDB9",
+  "weights_hash_after": "B25901DE0C2247215AD570B5B1E1E4F6349497AFB675BDF8BCD04E7C42780F04",
+  "weights_changed": true
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": "1.0.0",
+  "timestamp": "2026-11-13T11:14:03Z",
+  "source_notebook": "sanovocal-aya-qlora-training-phase-c-d (7).ipynb",
+  "continuation_point": "Cell 50 (AgentTune Tool-Contract Repair Training)",
+  "continuation_cell_status": "FAILED / CUDA OUT-OF-MEMORY",
+  "software": {
+    "python": "3.13",
+    "safetune": "0.1.12",
+    "auditkit": "1.1.6",
+    "agenttune": "1.1.3",
+    "trl": "1.7.1"
+  },
+  "datasets": {
+    "agenttune_train_sha256": "760C95D3024B7FB6DBF7E2D24985070F6189B2AA7DE84FA1877F5144CCB0E031",
+    "agenttune_val_sha256": "4D6F5194544FD73D796F9CA047C7E6DB19AAFBDECE5B5ECEF229858778AE644A",
+    "locked_test_sha256": "667E60B9F0EDABB2DE7232DA50A2F92E6362662A37B80701FB26BB7205366FC3",
+    "repair_dataset_sha256": "0A0F6E6D588587FC39B5CA2828C18BC7FB684F0586A0CA5F35549E2037F74FCF"
+  },
+  "phase_c_adapter": "sanovocal_aya_qlora_final",
+  "safetune_intervention": "apply_safereact (weight-space reactivation merge)"
+}
