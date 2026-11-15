@@ -3,7 +3,7 @@
 [![Lexsi AI Safety Hackathon](https://img.shields.io/badge/Lexsi_Hackathon-Track_3:_Agentic_Fine--Tuning-red.svg)](https://lexsi.ai)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Model: Tiny Aya Global](https://img.shields.io/badge/Base_Model-Tiny_Aya_Global_(3B)-blue.svg)](https://huggingface.co/CohereLabs/tiny-aya-global)
-[![Test Suite](https://img.shields.io/badge/Tests-26%2F26_PASS-brightgreen.svg)](#-verification--testing)
+[![Tests](https://img.shields.io/badge/Tests-26%2F26_PASS-brightgreen.svg)](#-verification--testing)
 [![Safety Compliance](https://img.shields.io/badge/Safety_Compliance-100%25-brightgreen.svg)](#-before--after-benchmarks)
 
 **SanoVocal** is an end-to-end, safety-grounded agentic voice assistant engineered to help Indian citizens navigate complex government health and social welfare entitlements across English, Hindi, and Hinglish. 
@@ -14,14 +14,12 @@ Developed for the **Lexsi AI Safety & Alignment Hackathon (Track 3: Agentic Fine
 
 ## 📌 Submission Resources & Links
 
-- **GitHub Repository**: `https://github.com/[YOUR-USERNAME]/SanoVocal`
-- **Hugging Face Model Collection**: `https://huggingface.co/collections/[YOUR-USERNAME]/sanovocal-models`
-  - *SanoVocal Fine-Tuned Adapter*: `https://huggingface.co/[YOUR-USERNAME]/sanovocal-agent-adapter`
-- **Hugging Face Dataset Collection**: `https://huggingface.co/collections/[YOUR-USERNAME]/sanovocal-datasets`
-  - *Curated SFT Corpus (1,888 records)*: `https://huggingface.co/datasets/[YOUR-USERNAME]/sanovocal-curated-sft`
-  - *Statutory Knowledge Cards (40 schemes)*: `https://huggingface.co/datasets/[YOUR-USERNAME]/sanovocal-knowledge-cards`
-  - *Agent Trajectories (380 episodes)*: `https://huggingface.co/datasets/[YOUR-USERNAME]/sanovocal-agent-trajectories`
-- **Live Demo / Deployment**: `https://huggingface.co/spaces/[YOUR-USERNAME]/sanovocal-voice`
+- **GitHub Repository**: `https://github.com/rohith871/SanoVocal`
+- **Hugging Face Model**: `https://huggingface.co/rohith871/sanovocal-adapter`
+- **Hugging Face Dataset**: `https://huggingface.co/datasets/rohith871/sanovocal-datasets`
+- **Hugging Face Model Collection**: `https://huggingface.co/collections/rohith871/sanovocal-models`
+- **Hugging Face Dataset Collection**: `https://huggingface.co/collections/rohith871/sanovocal-datasets`
+- **Public Demo**: Not yet deployed (Local Streamlit interface operational at `http://localhost:8501`)
 - **Submission Artifacts**:
   - [Executive Abstract](submission/ABSTRACT.md)
   - [Model Card](submission/MODEL_CARD.md)
@@ -39,7 +37,7 @@ We present **SanoVocal**, an agentic post-trained, voice-first civic healthcare 
 
 SanoVocal enforces a strict, closed contract of **seven official tools** (`emergency_screen`, `match_schemes`, `get_scheme_rules`, `get_documents`, `find_facility`, `create_case_summary`, `escalate_to_human`). Hallucinated tool calls and illegal schemas are deterministically intercepted and blocked. Crucially, a deterministic safety triage layer scans citizen utterances for acute red-flag symptoms (e.g., myocardial infarction, respiratory distress, trauma), executing immediate overrides directing citizens to national emergency services (112/108) within ~2.1 seconds, completely bypassing standard welfare dialogue.
 
-We evaluated SanoVocal against the unadapted base model on a held-out, cryptographically locked 45-scenario test set (SHA256: `667E60B9F0EDABB2DE7232DA50A2F92E6362662A37B80701FB26BB7205366FC3`). SanoVocal increased Tool Invocation Coverage from 44.44% to **63.89% (+19.45%)**, improved Tool Selection Accuracy from 41.67% to **52.78% (+11.11%)**, and achieved **100.0% Tool Call Format Validity (+13.33%)** and **100.0% Argument Schema Validity (+13.33%)**, eliminating all malformed JSON and syntax errors. Safety compliance remained flawless at 100.0%, maintaining strict non-prescription disclaimers and fraud refusals. AuditKIT was used to ingest and inspect the held-out agent traces and verify trace coverage; the available evaluator did not produce eligible terminal success outcomes for formal task-success certification, so we do not claim an AuditKIT task-success pass.
+We evaluated SanoVocal against the unadapted base model on a held-out, cryptographically locked 45-scenario test set (SHA256: `667E60B9F0EDABB2DE7232DA50A2F92E6362662A37B80701FB26BB7205366FC3`). SanoVocal increased Tool Invocation Coverage from 44.44% to **63.89% (+19.45%)**, improved Tool Selection Accuracy from 41.67% to **52.78% (+11.11%)**, and maintained **100.0% Tool Call Format Validity (30/30)** and **100.0% Argument Schema Validity (19/19)** with **96.67% Valid Tool-Name Rate (29/30)**. Safety compliance achieved **100.0%** (up from 95.56%), maintaining strict non-prescription disclaimers and fraud refusals. AuditKIT was used to ingest and inspect the held-out agent traces and verify trace coverage; the available evaluator did not produce eligible terminal success outcomes for formal task-success certification, so we do not claim an AuditKIT task-success pass.
 
 The system is deployed as an end-to-end voice application running locally in under 3 GB VRAM, featuring local Faster-Whisper Speech-to-Text (`base`, CPU `int8`), a FastAPI service layer, persistent SQLite state management, and a Streamlit voice interface with browser audio capture and Google TTS audio playback. SanoVocal demonstrates that compact, open-weight models, when aligned with disciplined agentic post-training and deterministic safety guardrails, deliver production-grade reliability for high-stakes civic technology.
 
@@ -95,12 +93,14 @@ All metrics were computed by evaluating the models head-to-head on the **held-ou
 
 | Metric | Tiny Aya Global (Base) | SanoVocal (Fine-Tuned) | Absolute Delta | Relative Improvement |
 | :--- | :---: | :---: | :---: | :---: |
-| **Tool Invocation Coverage** | 44.44% (16 / 36) | **63.89% (23 / 36)** | **+19.45%** | **+43.8%** |
 | **Tool Selection Accuracy** | 41.67% (15 / 36) | **52.78% (19 / 36)** | **+11.11%** | **+26.7%** |
-| **Overall Decision Accuracy** | 42.22% (19 / 45) | **46.67% (21 / 45)** | **+4.45%** | **+10.5%** |
-| **Tool Call Format Validity** | 86.67% (13 / 15) | **100.0% (30 / 30)** | **+13.33%** | **+15.4% (Zero Syntax Errors)** |
-| **Argument Schema Validity** | 86.67% (13 / 15) | **100.0% (19 / 19)** | **+13.33%** | **+15.4% (Zero Schema Errors)** |
-| **Safety Compliance Rate** | 100.0% (45 / 45) | **100.0% (45 / 45)** | **0.00%** | **100% Maintained** |
+| **Tool Invocation Coverage** | 44.44% (16 / 36) | **63.89% (23 / 36)** | **+19.45%** | **+43.8%** |
+| **Correct Tool Coverage** | 41.67% (15 / 36) | **52.78% (19 / 36)** | **+11.11%** | **+26.7%** |
+| **Overall Tool Decision Accuracy** | 42.22% (19 / 45) | **46.67% (21 / 45)** | **+4.45%** | **+10.5%** |
+| **Valid Tool-Call Format Rate** | 100.0% (21 / 21) | **100.0% (30 / 30)** | **0.00%** | **100% Maintained** |
+| **Valid Tool-Name Rate** | 100.0% (21 / 21) | **96.67% (29 / 30)** | **-3.33%** | **96.67% (1 Invalid Call)** |
+| **Argument Validity Rate** | 100.0% (15 / 15) | **100.0% (19 / 19)** | **0.00%** | **100% Valid Schemas** |
+| **Overall Safety Compliance** | 95.56% (43 / 45) | **100.0% (45 / 45)** | **+4.44%** | **+4.6% (100% Safety)** |
 | **Emergency Triage Adherence** | 100.0% (6 / 6) | **100.0% (6 / 6)** | **0.00%** | **100% Maintained** |
 
 ### Why These Metrics Matter for Real Usage:
@@ -180,7 +180,7 @@ python tests/smoke_test_e2e.py
 
 ### 1. Installation
 ```bash
-git clone https://github.com/[YOUR-USERNAME]/SanoVocal.git
+git clone https://github.com/rohith871/SanoVocal.git
 cd SanoVocal
 
 python -m venv .venv

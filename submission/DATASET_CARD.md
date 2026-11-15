@@ -41,6 +41,10 @@ The **SanoVocal Dataset Collection** is a curated, high-integrity multilingual d
 
 All data is structured to eliminate hallucinated entitlement claims, enforce strict clinical emergency triage overrides (directing acute patients to 112/108), and constrain agentic model actions strictly within the official 7-tool SanoVocal contract across **English, Hindi, and Hinglish**.
 
+- **Hugging Face Dataset**: `https://huggingface.co/datasets/rohith871/sanovocal-datasets`
+- **Hugging Face Collection**: `https://huggingface.co/collections/rohith871/sanovocal-datasets`
+- **GitHub Repository**: `https://github.com/rohith871/SanoVocal`
+
 ---
 
 ## Dataset Hierarchy & Artifacts

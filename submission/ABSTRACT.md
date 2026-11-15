@@ -15,7 +15,7 @@ We benchmarked the **SanoVocal fine-tuned adapter** against the baseline **Tiny 
 - **Tool Invocation Coverage**: Rose from **44.44% to 63.89%** (+19.45 percentage points).
 - **Overall Decision Accuracy**: Advanced from **42.22% to 46.67%** (+4.45 percentage points).
 - **Format Validity & Argument Validity**: Maintained at **100%** under Pydantic contract validation.
-- **Safety Compliance**: Reached **100.0%** (up from 97.78%), deterministically overriding conversational flows to emergency triage (directing citizens to 112/108) when acute symptoms (e.g. chest pain, respiratory distress) are detected.
+- **Safety Compliance**: Reached **100.0%** (up from 95.56%), deterministically overriding conversational flows to emergency triage (directing citizens to 112/108) when acute symptoms (e.g. chest pain, respiratory distress) are detected.
 
 To validate trace ingestion under formal evaluation, all 45 held-out trajectories were processed through **AuditKIT** (30 agent tool traces and 15 direct response turns). The available evaluator registered outcomes as ineligible for formal task-success certification, which we document as an honest evaluation boundary.
 

@@ -9,21 +9,21 @@
 
 ### Mandatory Compliance & Deliverables Checklist
 
-- [x] **Abstract < 500 words** — Verified: 423 words located in [`submission/ABSTRACT.md`](file:///c:/Users/KOYA%20ROHITH/SanoVocal/submission/ABSTRACT.md).
-- [ ] **Public GitHub repo** — Codebase prepared and sanitized; pending user push to `https://github.com/[YOUR-USERNAME]/sanovocal`.
-- [ ] **Public Hugging Face model repo** — Model card prepared in [`submission/MODEL_CARD.md`](file:///c:/Users/KOYA%20ROHITH/SanoVocal/submission/MODEL_CARD.md); pending user upload to `https://huggingface.co/[YOUR-USERNAME]/sanovocal-adapter`.
-- [ ] **Public Hugging Face model collection** — Collection placeholder: `https://huggingface.co/collections/[YOUR-USERNAME]/sanovocal-models`.
-- [ ] **Public Hugging Face dataset repositories** — Dataset card prepared in [`submission/DATASET_CARD.md`](file:///c:/Users/KOYA%20ROHITH/SanoVocal/submission/DATASET_CARD.md); pending user upload to `https://huggingface.co/datasets/[YOUR-USERNAME]/sanovocal-datasets`.
-- [ ] **Public Hugging Face dataset collection** — Collection placeholder: `https://huggingface.co/collections/[YOUR-USERNAME]/sanovocal-datasets`.
-- [ ] **Public demo / deployment** — Streamlit app functional locally at `http://localhost:8501`; public deployment link placeholder: `https://sanovocal.streamlit.app/`.
-- [x] **README / write-up** — Comprehensive public README available in [`README.md`](file:///c:/Users/KOYA%20ROHITH/SanoVocal/README.md) and [`submission/README.md`](file:///c:/Users/KOYA%20ROHITH/SanoVocal/submission/README.md).
+- [x] **Abstract < 500 words** — Verified: 459 words located in [`submission/ABSTRACT.md`](submission/ABSTRACT.md).
+- [x] **Public GitHub repo** — [`https://github.com/rohith871/SanoVocal`](https://github.com/rohith871/SanoVocal).
+- [x] **Public Hugging Face model repo** — [`https://huggingface.co/rohith871/sanovocal-adapter`](https://huggingface.co/rohith871/sanovocal-adapter).
+- [x] **Public Hugging Face model collection** — [`https://huggingface.co/collections/rohith871/sanovocal-models`](https://huggingface.co/collections/rohith871/sanovocal-models).
+- [x] **Public Hugging Face dataset repositories** — [`https://huggingface.co/datasets/rohith871/sanovocal-datasets`](https://huggingface.co/datasets/rohith871/sanovocal-datasets).
+- [x] **Public Hugging Face dataset collection** — [`https://huggingface.co/collections/rohith871/sanovocal-datasets`](https://huggingface.co/collections/rohith871/sanovocal-datasets).
+- [ ] **Public demo / deployment** — Not yet deployed (Streamlit app functional locally at `http://localhost:8501`).
+- [x] **README / write-up** — Comprehensive public README available in [`README.md`](../README.md) and [`submission/README.md`](README.md).
 - [x] **Reproducibility instructions** — Exact instructions, seed, hardware, and environment commands documented in README and evaluation summary.
 - [x] **Before / after metrics** — Multiple measured metrics reported (Selection Accuracy, Invocation Coverage, Overall Decision Accuracy, Validity, Safety Compliance).
 - [x] **Track specified** — Track 3: Agentic Fine-tuning.
 - [x] **Problem statement specified** — Primary: Reliable Tool Calling; Secondary: Agentic Distillation & Decision Workflows.
 - [x] **Base model specified** — `CohereLabs/tiny-aya-global` (3B parameters).
 - [x] **Training data documented** — Verified records (1,888 SFT records, 40 knowledge cards, 300 training trajectories, 100 final contract records).
-- [x] **Evaluation data documented** — Held-out 45-scenario test set documented in [`data/traces/agent_trajectories_test.jsonl`](file:///c:/Users/KOYA%20ROHITH/SanoVocal/data/traces/agent_trajectories_test.jsonl).
+- [x] **Evaluation data documented** — Held-out 45-scenario test set documented in [`data/traces/agent_trajectories_test.jsonl`](../data/traces/agent_trajectories_test.jsonl).
 - [x] **Locked test hash documented** — SHA256: `667E60B9F0EDABB2DE7232DA50A2F92E6362662A37B80701FB26BB7205366FC3`.
 - [x] **Adapter hash documented** — SHA256: `39291232E229F7B5B3A03A424298CB67025CC958E4D09B59564588C6AB44FCAC`.
 - [x] **No secrets committed** — Repository-wide automated scan completed (0 active tokens/keys in tracked files).

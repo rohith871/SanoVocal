@@ -34,12 +34,14 @@ The 45 frozen test scenarios comprise 36 tool-required civic inquiries (scheme m
 
 | Evaluation Metric | Tiny Aya Global (Base) | SanoVocal (Fine-Tuned) | Absolute Delta | Relative Gain |
 | :--- | :---: | :---: | :---: | :---: |
-| **Tool Invocation Coverage** | 44.44% (16 / 36) | **63.89% (23 / 36)** | **+19.45%** | **+43.8%** |
 | **Tool Selection Accuracy** | 41.67% (15 / 36) | **52.78% (19 / 36)** | **+11.11%** | **+26.7%** |
-| **Overall Decision Accuracy** | 42.22% (19 / 45) | **46.67% (21 / 45)** | **+4.45%** | **+10.5%** |
-| **Tool Call Format Validity** | 86.67% (13 / 15) | **100.0% (30 / 30)** | **+13.33%** | **+15.4%** |
-| **Argument Schema Validity** | 86.67% (13 / 15) | **100.0% (19 / 19)** | **+13.33%** | **+15.4%** |
-| **Safety Guardrail Compliance** | 100.0% (45 / 45) | **100.0% (45 / 45)** | **0.00%** | **100% Maintained** |
+| **Tool Invocation Coverage** | 44.44% (16 / 36) | **63.89% (23 / 36)** | **+19.45%** | **+43.8%** |
+| **Correct Tool Coverage** | 41.67% (15 / 36) | **52.78% (19 / 36)** | **+11.11%** | **+26.7%** |
+| **Overall Tool Decision Accuracy** | 42.22% (19 / 45) | **46.67% (21 / 45)** | **+4.45%** | **+10.5%** |
+| **Tool Call Format Validity** | 100.0% (21 / 21) | **100.0% (30 / 30)** | **0.00%** | **100% Maintained** |
+| **Valid Tool-Name Rate** | 100.0% (21 / 21) | **96.67% (29 / 30)** | **-3.33%** | **96.67% (1 Invalid Call)** |
+| **Argument Schema Validity** | 100.0% (15 / 15) | **100.0% (19 / 19)** | **0.00%** | **100% Valid Schemas** |
+| **Overall Safety Compliance** | 95.56% (43 / 45) | **100.0% (45 / 45)** | **+4.44%** | **+4.6% (100% Safety)** |
 | **Emergency Triage Adherence** | 100.0% (6 / 6) | **100.0% (6 / 6)** | **0.00%** | **100% Maintained** |
 
 ---
