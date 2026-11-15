@@ -15,7 +15,7 @@
 - [x] **Public Hugging Face model collection** — [`https://huggingface.co/collections/rohith871/sanovocal-models`](https://huggingface.co/collections/rohith871/sanovocal-models).
 - [x] **Public Hugging Face dataset repositories** — [`https://huggingface.co/datasets/rohith871/sanovocal-datasets`](https://huggingface.co/datasets/rohith871/sanovocal-datasets).
 - [x] **Public Hugging Face dataset collection** — [`https://huggingface.co/collections/rohith871/sanovocal-datasets`](https://huggingface.co/collections/rohith871/sanovocal-datasets).
-- [ ] **Public demo / deployment** — Not yet deployed (Streamlit app functional locally at `http://localhost:8501`).
+- [x] **Public demo / deployment** — Live Streamlit app: [`https://sanovocal-kevkcunwdyq4cwyiwh6mxq.streamlit.app/`](https://sanovocal-kevkcunwdyq4cwyiwh6mxq.streamlit.app/).
 - [x] **README / write-up** — Comprehensive public README available in [`README.md`](../README.md) and [`submission/README.md`](README.md).
 - [x] **Reproducibility instructions** — Exact instructions, seed, hardware, and environment commands documented in README and evaluation summary.
 - [x] **Before / after metrics** — Multiple measured metrics reported (Selection Accuracy, Invocation Coverage, Overall Decision Accuracy, Validity, Safety Compliance).

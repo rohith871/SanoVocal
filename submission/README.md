@@ -14,18 +14,24 @@ Developed for the **Lexsi AI Safety & Alignment Hackathon (Track 3: Agentic Fine
 
 ## 📌 Submission Resources & Links
 
+- **Live Public Demo**: https://sanovocal-kevkcunwdyq4cwyiwh6mxq.streamlit.app/
 - **GitHub Repository**: `https://github.com/rohith871/SanoVocal`
 - **Hugging Face Model**: `https://huggingface.co/rohith871/sanovocal-adapter`
 - **Hugging Face Dataset**: `https://huggingface.co/datasets/rohith871/sanovocal-datasets`
 - **Hugging Face Model Collection**: `https://huggingface.co/collections/rohith871/sanovocal-models`
 - **Hugging Face Dataset Collection**: `https://huggingface.co/collections/rohith871/sanovocal-datasets`
-- **Public Demo**: Not yet deployed (Local Streamlit interface operational at `http://localhost:8501`)
 - **Submission Artifacts**:
   - [Executive Abstract](submission/ABSTRACT.md)
   - [Model Card](submission/MODEL_CARD.md)
   - [Dataset Card](submission/DATASET_CARD.md)
   - [Evaluation Summary](submission/EVALUATION_SUMMARY.md)
   - [Submission Checklist](submission/SUBMISSION_CHECKLIST.md)
+
+---
+
+## 🌐 Live Demo
+
+**Try SanoVocal:** https://sanovocal-kevkcunwdyq4cwyiwh6mxq.streamlit.app/
 
 ---
 

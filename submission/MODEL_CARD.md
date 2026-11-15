@@ -34,6 +34,7 @@ The model is designed to function as an agentic conversational navigator for Ind
 - **Hugging Face Model**: `https://huggingface.co/rohith871/sanovocal-adapter`
 - **Hugging Face Collection**: `https://huggingface.co/collections/rohith871/sanovocal-models`
 - **GitHub Repository**: `https://github.com/rohith871/SanoVocal`
+- **Live Public Demo**: https://sanovocal-kevkcunwdyq4cwyiwh6mxq.streamlit.app/
 
 ---
 
